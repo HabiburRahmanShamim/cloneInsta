@@ -7,16 +7,15 @@
             <img src="https://th.bing.com/th/id/OIP.TrqiHn-8hoz1tohyRys4PQAAAA?pid=Api&rs=1" style="height: 150px;" class="rounded-circle">
         </div>
         <div class="col-9 pt-3 pl-4">
-            <div><h2>freecodecamp</h2></div>
+            <div><h2>{{  $user->username  }}</h2></div> // Showing user's username which is sent from profilesController
             <div class="d-flex pt-2">
                 <div class="pr-5"><strong>304</strong> posts</div>
                 <div class="pr-5"><strong>50.9k</strong> followers</div>
                 <div class="pr-5"><strong>261</strong> following</div>
             </div>
-            <div class="pt-2"><b>freeCodeCamp.org</b></div>
-            <div>We're a global community of millions of people learning to code together.
-                    We're an open source, donor-supported, 501(c)(3) nonprofit.</div>
-            <div><a href="www.freecodecamp.org"><b>www.freecodecamp.org</b></a></div>
+            <div class="pt-2"><b>{{  $user->profile-title  }}}</b></div>
+            <div>{{  $user->profile->description }}}</div>
+            <div><a href="#"><b>{{  $user->profile->url }}</b></a></div>
         </div>
     </div>
     <div class="row pt-5">
