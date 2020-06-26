@@ -6,6 +6,7 @@ use App\User;
 use App\Post;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
+use Intervention\Image\Facades\Image;
 
 class PostsController extends Controller
 {
@@ -31,12 +32,22 @@ class PostsController extends Controller
 
         $imagePath = request('image')->store('uploads', 'public'); // Store image to storage upload directory and Returns file path
 
+        $image = Image::make(public_path("storage/{$imagePath}"))->fit(1200, 1200);
+        $image->save();
+
         $user = Auth::user();
         $user->posts()->create([
             'caption' => $data['caption'],
-            'image' => $data['image'],
+            'image' => $imagePath,
         ]);
 
         return redirect('/profile/' . $user->id);
+    }
+
+    public function show(\App\Post $post)
+    {
+        return view("posts/show", [
+            'post' => $post,
+        ]);
     }
 }

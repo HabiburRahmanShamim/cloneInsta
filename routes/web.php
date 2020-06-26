@@ -27,6 +27,10 @@ Route::get('/profile/{user}', 'profilesController@index')->name('profile.show');
 //Routing post create
 Route::get('/p/create', 'PostsController@create');
 
+
+//Routing single post view
+Route::get('/p/{post}', 'PostsController@show');
+
 //Routing add post data from add post form
 Route::post('/p', 'PostsController@store');
 
