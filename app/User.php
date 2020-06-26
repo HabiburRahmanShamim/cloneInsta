@@ -40,8 +40,15 @@ class User extends Authenticatable
     //Every user have exactly one profile
     // this function will return the information
     // of this user's profile
+
     public function profile()
     {
         return $this->hasOne(Profile::class);
+    }
+
+    //A user can have many posts
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
     }
 }

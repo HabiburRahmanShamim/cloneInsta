@@ -3,18 +3,22 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-3 pt-3 pl-5 pr-5 pb-5">
-            <img src="https://th.bing.com/th/id/OIP.TrqiHn-8hoz1tohyRys4PQAAAA?pid=Api&rs=1" style="height: 150px;" class="rounded-circle">
+        <div class="col-3 pl-4 pr-4 pt-4 pb-4" style="display:flex;">
+            <img src="https://th.bing.com/th/id/OIP.TrqiHn-8hoz1tohyRys4PQAAAA?pid=Api&rs=1"  style="margin: auto; max-width: 80%; max-height: 80%" class="rounded-circle">
+
         </div>
-        <div class="col-9 pt-3 pl-4">
-            <div><h2>{{  $user->username  }}</h2></div> // Showing user's username which is sent from profilesController
+        <div class="col-9 pt-4 pl-5">
+            <div class="d-flex justify-content-between align-baseline ">
+                <h2>{{  $user->username  }}</h2>
+                <a href="#">Add new post</a>
+            </div>
             <div class="d-flex pt-2">
                 <div class="pr-5"><strong>304</strong> posts</div>
                 <div class="pr-5"><strong>50.9k</strong> followers</div>
                 <div class="pr-5"><strong>261</strong> following</div>
             </div>
-            <div class="pt-2"><b>{{  $user->profile-title  }}}</b></div>
-            <div>{{  $user->profile->description }}}</div>
+            <div class="pt-2"><b>{{  $user->profile->title  }}</b></div>
+            <div>{{  $user->profile->description }}</div>
             <div><a href="#"><b>{{  $user->profile->url }}</b></a></div>
         </div>
     </div>

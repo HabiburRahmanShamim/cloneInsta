@@ -23,3 +23,10 @@ Auth::routes();
 
 //Routing "/profile/user_id" link to profilesController file
 Route::get('/profile/{user}', 'profilesController@index')->name('profile.show');
+
+//Routing post create
+Route::get('/p/create', 'PostsController@create');
+
+//Routing add post data from add post form
+Route::post('/p', 'PostsController@store');
+
