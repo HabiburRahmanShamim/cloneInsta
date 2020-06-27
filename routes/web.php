@@ -24,15 +24,17 @@ Auth::routes();
 //Routing "/profile/user_id" link to profilesController file
 Route::get('/profile/{user}', 'profilesController@index')->name('profile.show');
 
-//Routing "/profile/user_id" link to profilesController file
+//Routing "/profile/user_id/edit" link to profilesController file
 Route::get('/profile/{user}/edit', 'profilesController@edit')->name('profile.edit');
 
 //Routing "/profile/user_id" link from patch to profilesController file for updating profile info
 Route::patch('/profile/{user}', 'profilesController@update')->name('profile.update');
 
+
+//If multiple link has same name then we have to maintain order.
+
 //Routing post create
 Route::get('/p/create', 'PostsController@create');
-
 
 //Routing single post view
 Route::get('/p/{post}', 'PostsController@show');
