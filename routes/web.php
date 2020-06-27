@@ -42,3 +42,6 @@ Route::get('/p/{post}', 'PostsController@show');
 //Routing add post data from add post form
 Route::post('/p', 'PostsController@store');
 
+
+//Routing follow user button click sent via axios.post() with link path /follow/{id}
+Route::post('/follow/{user}', 'FollowsController@store');

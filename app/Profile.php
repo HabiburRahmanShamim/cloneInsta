@@ -22,4 +22,10 @@ class Profile extends Model
     {
         return $this->belongsTo(User::class);
     }
+
+    //A Profile has many followers of User
+    public function followers()
+    {
+        return $this->belongsToMany(User::class);
+    }
 }

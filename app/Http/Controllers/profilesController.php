@@ -23,7 +23,9 @@ class profilesController extends Controller
     public function index(\App\User $user)
     {
         //it will do auto validation
-        return view('profile/index', compact('user')); // Calling for show with user information instance variable as 'user'
+
+        $follows = (Auth::user()) ? Auth::user()->following->contains($user->profile) : false;
+        return view('profile/index', compact('user', 'follows')); // Calling for show with user information instance variable as 'user'
     }
 
     public function edit(\App\User $user)
