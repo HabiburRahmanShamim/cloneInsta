@@ -8,6 +8,12 @@ use Illuminate\Support\Facades\Auth;
 
 class FollowsController extends Controller
 {
+//    User needs to login before any follow/unfollow work
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function store(User $user)
     {
 //        On button click
