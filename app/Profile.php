@@ -8,6 +8,13 @@ class Profile extends Model
 {
     public $guarded = []; // Like fillable
 
+
+    public function profileImage()
+    {
+        $imagepath = ($this->image) ? ($this->image) : "defaultImage.svg";
+        return "/storage/" . $imagepath;
+    }
+
     // Every profile belongs to one user
     // this function will return the information
     // of this profile's user

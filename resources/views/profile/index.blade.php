@@ -4,7 +4,7 @@
 <div class="container">
     <div class="row">
         <div class="col-3 pl-4 pr-4 pt-4 pb-4" style="display:flex;">
-            <img src="/storage/{{  $user->profile->image }}"  style="margin: auto; max-width: 90%; max-height: 90%" class="rounded-circle">
+            <img src="{{  $user->profile->profileImage() }}"  style="margin: auto; max-width: 90%; max-height: 90%" class="rounded-circle">
 
         </div>
         <div class="col-9 pt-4 pl-5">

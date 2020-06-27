@@ -11,7 +11,7 @@
 
                     <div class="row"><h4>Edit Post</h4></div>
                     <div class="form-group row">
-                        <label for="title" class="col-md-4 col-form-label">Edit Caption</label>
+                        <label for="title" class="col-md-4 col-form-label">Edit Title</label>
 
                         <input id="title"
                                type="text"

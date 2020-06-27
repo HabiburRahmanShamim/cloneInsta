@@ -50,15 +50,17 @@ class profilesController extends Controller
             // Store image to storage upload directory and Returns file path
             $imagePath = request('image')->store('profile', 'public');
             // Fit the image and save it to the given folder
-            $image = Image::make(public_path("storage/{$imagePath}"))->fit(1000, 1000);
+            $image = Image::make(public_path("/storage/{$imagePath}"))->fit(1000, 1000);
             $image->save();
+
+            $imageArray = ['image' => $imagePath];
         }
 
 
         $user = Auth::user();
         $user->profile->update(array_merge(
             $data,
-            ['image' => $imagePath]
+            ($imageArray) ?? []
         ));
 
 
