@@ -50,11 +50,11 @@
                                 </li>
                             @endif
                         @else
-                            <div class="d-flex" style="background: red">
+                            <div class="d-flex">
 
-                                <a class="navbar-brand" href="/profile/{{  Auth::user()->id }}" style="background: white">
+                                <a class="navbar-brand" href="/profile/{{  Auth::user()->id }}" >
                                     <div >
-                                        <img src="{{  Auth::user()->profile->profileImage() }}" style="height: 20px;" class="pr-2">
+                                        <img src="{{  Auth::user()->profile->profileImage() }}" style="height: 25px;" class="pr-3">
                                     </div>
                                 </a>
                                 <li class="nav-item dropdown">

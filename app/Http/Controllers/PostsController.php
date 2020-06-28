@@ -46,8 +46,10 @@ class PostsController extends Controller
 
     public function show(\App\Post $post)
     {
+        $follows = (Auth::user()) ? Auth::user()->following->contains($post->user->profile) : false;
         return view("posts/show", [
             'post' => $post,
+            'follows' => $follows,
         ]);
     }
 
