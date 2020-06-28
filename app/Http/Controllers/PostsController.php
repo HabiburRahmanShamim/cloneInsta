@@ -60,7 +60,10 @@ class PostsController extends Controller
         //$posts = Post::whereIn('user_id', $users)->latest()->get();
 
         //It will pass user info along with their post
-        $posts = Post::whereIn('user_id', $users)->with('user')->latest()->get();
+//        $posts = Post::whereIn('user_id', $users)->with('user')->latest()->get();
+        //Paginating
+        $posts = Post::whereIn('user_id', $users)->with('user')->latest()->paginate(5);
+
 
         return view('posts.index', compact('posts'));
     }
