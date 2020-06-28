@@ -2,7 +2,7 @@
 
 @section('content')
     <div class="container">
-        <div class="col-3 h-25 pt-3 float-right sticky-top" style="background: white; height: 1000px;">
+        <div class="col-3 h-auto pt-3 float-right sticky-top" style="background: white; height: 1000px;">
             <div>
                 <div class="d-flex align-items-center">
                     <div class="col-2 pr-5" >

@@ -39,6 +39,7 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+                        <search-user class="navbar-nav ml-auto mr-auto"></search-user>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">

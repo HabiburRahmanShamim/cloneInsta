@@ -48,3 +48,5 @@ Route::post('/p', 'PostsController@store');
 
 //Routing follow user button click sent via axios.post() with link path /follow/{id}
 Route::post('/follow/{user}', 'FollowsController@store');
+
+Route::post('/search/{text}', 'FollowsController@search');
