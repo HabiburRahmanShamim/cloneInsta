@@ -9,7 +9,7 @@
             <div class="col-4">
                 <div>
                     <div class="d-flex align-items-center">
-                        <div class="col-2 pr-5" style="background: white">
+                        <div class="col-2 pr-5" >
                             <img src="{{  $post->user->profile->profileImage() }}" style="max-width: 40px;" class="rounded-circle">
                         </div>
                         <div>

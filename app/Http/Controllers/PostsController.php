@@ -50,4 +50,16 @@ class PostsController extends Controller
             'post' => $post,
         ]);
     }
+
+    public function index()
+    {
+        $users = Auth::user()->following()->pluck('profiles.user_id');
+        //$posts = Post::whereIn('user_id', $users)->orderBy('created_at', 'DESC')->get();
+        //$posts = Post::whereIn('user_id', $users)->latest()->get();
+
+        //It will pass user info along with their post
+        $posts = Post::whereIn('user_id', $users)->with('user')->latest()->get();
+
+        return view('posts.index', compact('posts'));
+    }
 }

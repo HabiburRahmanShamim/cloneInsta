@@ -13,13 +13,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
 
 Auth::routes();
 
-//Route::get('/home', 'HomeController@index')->name('home');
+
+//If multiple link has same name then we have to maintain order.
+
+
+//Route::get('/', 'HomeController@index')->name('home');
 
 //Routing "/profile/user_id" link to profilesController file
 Route::get('/profile/{user}', 'profilesController@index')->name('profile.show');
@@ -31,7 +32,9 @@ Route::get('/profile/{user}/edit', 'profilesController@edit')->name('profile.edi
 Route::patch('/profile/{user}', 'profilesController@update')->name('profile.update');
 
 
-//If multiple link has same name then we have to maintain order.
+
+// Routing the page after login
+Route::get('/', 'PostsController@index');
 
 //Routing post create
 Route::get('/p/create', 'PostsController@create');
