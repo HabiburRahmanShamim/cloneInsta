@@ -1988,8 +1988,7 @@ __webpack_require__.r(__webpack_exports__);
       var _this = this;
 
       axios.post('/search/' + this.text).then(function (response) {
-        _this.matches = response.data;
-        console.log(_this.matches);
+        _this.matches = response.data; //console.log(this.matches);
       });
     }
   }
@@ -37570,7 +37569,7 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", { staticClass: "container" }, [
+  return _c("div", { staticClass: "row col-6" }, [
     _c("input", {
       directives: [
         {
@@ -37580,7 +37579,7 @@ var render = function() {
           expression: "text"
         }
       ],
-      staticClass: "form-control w-100 card-body",
+      staticClass: "form-control h-100 w-100 position-relative",
       attrs: { type: "text", placeholder: "Search", "aria-label": "Search" },
       domProps: { value: _vm.text },
       on: {
@@ -37598,11 +37597,17 @@ var render = function() {
       ? _c(
           "div",
           {
-            staticClass: "collapse card-footer w-100 mt-5",
-            staticStyle: { "max-height": "200px", overflow: "auto" }
+            staticClass: "w-100 position-absolute rounded-top",
+            staticStyle: {
+              background: "white",
+              top: "40px",
+              "max-height": "200px",
+              overflow: "auto",
+              "z-index": "1000"
+            }
           },
           _vm._l(_vm.matches, function(user) {
-            return _c("p", [
+            return _c("p", {}, [
               _c("img", {
                 staticClass: "rounded-circle ",
                 staticStyle: { "max-width": "40px" },

@@ -2,25 +2,25 @@
 
 @section('content')
     <div class="container">
-        <div class="col-3 h-auto mt-3 pt-3 float-right sticky-top" style="background: white ;z-index: 2;">
-            <div>
+        <div class="col-4 h-auto mt-3 pt-3 float-right sticky-top" style="z-index: 2;">
+            <div class="pl-5">
                 <div class="d-flex align-items-center">
                     <div class="col-2 pr-5" >
                         <a href="/profile/{{  Auth::user()->id }}">
-                            <img src="{{  Auth::user()->profile->profileImage() }}" style="max-width: 40px;" class="rounded-circle position-relative">
+                            <img src="{{  Auth::user()->profile->profileImage() }}" style="max-width: 45px;" class="rounded-circle position-relative">
                         </a>
                     </div>
-                    <div>
+                    <div class="pl-3">
                         <a href="/profile/{{  Auth::user()->id }}">
-                               <span class=" pl-2 font-weight-bold text-dark">
+                               <span class=" font-weight-bold text-dark">
                                    {{  Auth::user()->username }}
                                </span>
                         </a><br>
-                        <span class="pl-2"> {{  Auth::user()->profile->title }}</span>
+                        <span class=""> {{  Auth::user()->profile->title }}</span>
                     </div>
                 </div>
                 <hr>
-                <div>
+                <div class="pl-3">
                     <a href="/profile/{{  Auth::user()->id }}">
                             <span class="font-weight-bold text-dark">
                                 {{  Auth::user()->username}}
@@ -32,10 +32,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-9">
+        <div class="col-8" >
             @foreach($posts as $post)
                 <div class="row pb-3 justify-content-center ">
-                    <div class="col-7 border" style="background: white">
+                    <div class="col-11 border" style="background: white">
                         <div class="row d-flex align-items-center pl-1 pt-2 pb-2">
                             <div class="">
                                 <a href="/profile/{{  $post->user->id }}">

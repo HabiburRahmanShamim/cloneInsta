@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm " >
             <div class="container">
                 <a class="navbar-brand d-flex" href="{{ url('/') }}">
                     <div ><img src="/svg/topInsta.logo.svg" style="height: 20px; border-right: 1px solid #333;" class="pr-2"></div>
@@ -31,14 +31,14 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <div class="collapse navbar-collapse" id="navbarSupportedContent" style="height: 45px;">
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav mr-auto">
 
                     </ul>
 
 {{--                    Search box in middle--}}
-                    <div class="col-6 text-center"><search-user class="navbar-nav ml-auto mr-auto"></search-user></div>
+                    <div class="col-6"><search-user></search-user></div>
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
