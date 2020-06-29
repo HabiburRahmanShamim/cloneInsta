@@ -1970,19 +1970,26 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   mounted: function mounted() {
     console.log('Component mounted.');
   },
   data: function data() {
     return {
-      text: ''
+      text: '',
+      matches: []
     };
   },
   methods: {
     SearchUser: function SearchUser() {
+      var _this = this;
+
       axios.post('/search/' + this.text).then(function (response) {
-        console.log(response.data);
+        _this.matches = response.data;
+        console.log(_this.matches);
       });
     }
   }
@@ -37564,35 +37571,54 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", { staticClass: "container" }, [
-    _c("form", { staticClass: "form-inline" }, [
-      _c("i", {
-        staticClass: "fas fa-search",
-        attrs: { "aria-hidden": "true" }
-      }),
-      _vm._v(" "),
-      _c("input", {
-        directives: [
-          {
-            name: "model",
-            rawName: "v-model",
-            value: _vm.text,
-            expression: "text"
-          }
-        ],
-        staticClass: "form-control form-control-sm ml-3 w-75",
-        attrs: { type: "text", placeholder: "Search", "aria-label": "Search" },
-        domProps: { value: _vm.text },
-        on: {
-          keyup: _vm.SearchUser,
-          input: function($event) {
-            if ($event.target.composing) {
-              return
-            }
-            _vm.text = $event.target.value
-          }
+    _c("input", {
+      directives: [
+        {
+          name: "model",
+          rawName: "v-model",
+          value: _vm.text,
+          expression: "text"
         }
-      })
-    ])
+      ],
+      staticClass: "form-control w-100 card-body",
+      attrs: { type: "text", placeholder: "Search", "aria-label": "Search" },
+      domProps: { value: _vm.text },
+      on: {
+        keyup: _vm.SearchUser,
+        input: function($event) {
+          if ($event.target.composing) {
+            return
+          }
+          _vm.text = $event.target.value
+        }
+      }
+    }),
+    _vm._v(" "),
+    _vm.matches.length
+      ? _c(
+          "div",
+          {
+            staticClass: "collapse card-footer w-100 mt-5",
+            staticStyle: { "max-height": "200px", overflow: "auto" }
+          },
+          _vm._l(_vm.matches, function(user) {
+            return _c("p", [
+              _c("img", {
+                staticClass: "rounded-circle ",
+                staticStyle: { "max-width": "40px" },
+                attrs: { src: "/storage/" + user.profile.image }
+              }),
+              _vm._v(" "),
+              _c("a", { attrs: { href: "/profile/" + user.id } }, [
+                _c("span", { staticClass: "pl-2 font-weight-bold text-dark" }, [
+                  _vm._v(_vm._s(user.username))
+                ])
+              ])
+            ])
+          }),
+          0
+        )
+      : _vm._e()
   ])
 }
 var staticRenderFns = []

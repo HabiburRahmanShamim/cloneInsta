@@ -1,10 +1,13 @@
 <template>
     <div class="container">
-        <form class="form-inline">
-            <i class="fas fa-search" aria-hidden="true"></i>
-            <input class="form-control form-control-sm ml-3 w-75" type="text" placeholder="Search"
-                   aria-label="Search" v-model="text" @keyup="SearchUser">
-        </form>
+        <input class="form-control w-100 card-body" type="text" placeholder="Search"
+               aria-label="Search" v-model="text" v-on:keyup="SearchUser">
+        <div class="collapse card-footer w-100 mt-5" style="max-height: 200px; overflow: auto" v-if="matches.length">
+            <p v-for="user in matches">
+                <img :src="'/storage/' + user.profile.image" style="max-width: 40px;" class="rounded-circle "/>
+                <a :href="'/profile/' + user.id"><span class="pl-2 font-weight-bold text-dark">{{  user.username }}</span></a>
+            </p>
+        </div>
     </div>
 </template>
 
@@ -17,6 +20,7 @@
         data: function(){
             return{
                 text : '',
+                matches : [],
             }
         },
 
@@ -24,7 +28,8 @@
             SearchUser: function () {
                 axios.post('/search/'+this.text)
                     .then(response => {
-                        console.log(response.data);
+                        this.matches = response.data;
+                        console.log(this.matches);
                     })
             }
         },

@@ -25,8 +25,9 @@ class FollowsController extends Controller
     public function search(Request $req)
     {
         $dt = $req->text;
-        $user = User::query()->where('username', 'LIKE', '%'.$dt.'%')->get();
+        $users = (strlen($dt) > 1) ? User::query()->where('username', 'LIKE', '%'.$dt.'%')->with('profile')->get() : "";
+        //$profiles =
 
-        return $user;
+        return  $users;
     }
 }

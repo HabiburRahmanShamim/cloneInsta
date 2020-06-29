@@ -2,12 +2,12 @@
 
 @section('content')
     <div class="container">
-        <div class="col-3 h-auto pt-3 float-right sticky-top" style="background: white; height: 1000px;">
+        <div class="col-3 h-auto mt-3 pt-3 float-right sticky-top" style="background: white ;z-index: 2;">
             <div>
                 <div class="d-flex align-items-center">
                     <div class="col-2 pr-5" >
                         <a href="/profile/{{  Auth::user()->id }}">
-                            <img src="{{  Auth::user()->profile->profileImage() }}" style="max-width: 40px;" class="rounded-circle">
+                            <img src="{{  Auth::user()->profile->profileImage() }}" style="max-width: 40px;" class="rounded-circle position-relative">
                         </a>
                     </div>
                     <div>

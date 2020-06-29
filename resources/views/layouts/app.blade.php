@@ -37,9 +37,11 @@
 
                     </ul>
 
+{{--                    Search box in middle--}}
+                    <div class="col-6 text-center"><search-user class="navbar-nav ml-auto mr-auto"></search-user></div>
+
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
-                        <search-user class="navbar-nav ml-auto mr-auto"></search-user>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -52,12 +54,13 @@
                             @endif
                         @else
                             <div class="d-flex">
-
-                                <a class="navbar-brand" href="/profile/{{  Auth::user()->id }}" >
-                                    <div >
-                                        <img src="{{  Auth::user()->profile->profileImage() }}" style="height: 25px;" class="rounded-circle">
-                                    </div>
-                                </a>
+                                <li>
+                                    <a class="navbar-brand" href="/profile/{{  Auth::user()->id }}" >
+                                        <div >
+                                            <img src="{{  Auth::user()->profile->profileImage() }}" style="height: 25px;" class="rounded-circle">
+                                        </div>
+                                    </a>
+                                </li>
                                 <li class="nav-item dropdown">
                                     <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
                                         {{ Auth::user()->username }} <span class="caret"></span>
