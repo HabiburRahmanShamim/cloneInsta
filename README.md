@@ -29,8 +29,8 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 ### Tools
 
 - **[Laravel Framework 7.17.1](https://laravel.com/)**
-- **[HTML5](https://html.com/)
-- **[BOOTSTRAP 4](https://getbootstrap.com/)
+- **[HTML5](https://html.com/)**
+- **[BOOTSTRAP 4](https://getbootstrap.com/)**
 - **[Vue.js](https://vuejs.org/)**
 - **[SqLite](https://www.sqlite.org/index.html)**
 
