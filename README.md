@@ -33,7 +33,3 @@ cloneInsta is a photo sharing social network platform which is a clone project o
 - **[SqLite](https://www.sqlite.org/index.html)**
 
 
-
-## License
-
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
