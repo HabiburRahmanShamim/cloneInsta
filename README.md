@@ -17,10 +17,10 @@ cloneInsta is a photo sharing social network platform which is a clone project o
 - Photo View with caption
 
 ## Screenshots
-<img src = "1.png">
-<img src = "2.png">
-<img src = "3.png">
-<img src = "4.png">
+<img src = "1.PNG">
+<img src = "2.PNG">
+<img src = "3.PNG">
+<img src = "4.PNG">
 
 
 ### Tools
