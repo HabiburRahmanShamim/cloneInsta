@@ -17,8 +17,11 @@ cloneInsta is a photo sharing social network platform which is a clone project o
 - Photo View with caption
 
 ## Screenshots
+<img src = "1.png">
+<img src = "2.png">
+<img src = "3.png">
+<img src = "4.png">
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
 
 ### Tools
 
@@ -27,6 +30,8 @@ We would like to extend our thanks to the following sponsors for funding Laravel
 - **[BOOTSTRAP 4](https://getbootstrap.com/)**
 - **[Vue.js](https://vuejs.org/)**
 - **[SqLite](https://www.sqlite.org/index.html)**
+
+
 
 ## License
 
