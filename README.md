@@ -1,7 +1,7 @@
 <p align="center"><img src="https://imageog.flaticon.com/icons/png/512/87/87390.png?size=1200x630f&pad=10,10,10,10&ext=png&bg=FFFFFFFF" width="400"></p>
 
 
-## cloneInsta
+## clonastagram
 
 cloneInsta is a photo sharing social network platform which is a clone project of Instagram. It is always fun to learn something new and make a clone of an existing system. 
 
