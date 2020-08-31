@@ -1,0 +1,32 @@
+1. First, install Heroku CLI.
+
+2. After that, you may now login to Heroku thru the CLI:
+    $ heroku login
+
+3. create a file named Procfile that contains:
+    web: vendor/bin/heroku-php-apache2 public/
+
+
+4. Create App on Heroku
+   $ heroku create copycatinsta
+
+5. Adding a PHP Build Pack
+    $ heroku buildpacks:set heroku/php
+
+6. Add the following line to require section of composer.json file  
+    "ext-pdo_sqlite": "*"
+
+7.  Run composer update
+
+8. Git add the changes
+   $ git add . 
+
+9. Pushing the Code to Heroku
+    $ git push heroku master
+
+10. Open app setting on heroku wesite, and add the environment variables acording to the .env file-
+    APP_ENV=local
+    APP_KEY=base64:egdCfLpB/W0ilvvLv+JeTlaxg4pmZXeQXuOwKPxKXL4=
+    APP_DEBUG=true
+    APP_LOG_LEVEL=debug
+    DB_CONNECTION=sqlite
