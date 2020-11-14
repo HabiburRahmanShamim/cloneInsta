@@ -36,4 +36,5 @@ cloneInsta is an online photo sharing platform which is a clone of the famous so
 
 #### Link : http://copycatinsta.herokuapp.com/login
 Email: test@test.com , Pass: 12345678
+<br>
 Use this cadential to have a look at the platform. As I am not using any server for storage. Thus you can not see the images, as Heroku deletes the internal storage files every time.
