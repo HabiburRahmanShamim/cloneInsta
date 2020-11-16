@@ -39,4 +39,4 @@ Email: test1@test.com , Pass: 12345678
 <br>
 somes created users: testTest, testTest1, shamim, sha_mim
 <br>
-Use this cadential to have a look at the platform. As I am not using any server for storage. Thus you can not see the images, as Heroku deletes the internal storage files every time.
+Use this cadential to have a look at the platform. You can not see the images, as Heroku deletes the internal storage files every time.
